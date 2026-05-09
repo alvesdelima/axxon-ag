@@ -516,6 +516,41 @@
         .logo-card-use {
             font-size: 0.72rem;
             color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 10px;
+        }
+
+        .logo-card-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: 1px solid var(--border-bright);
+            color: var(--purple-light);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            width: fit-content;
+        }
+
+        .btn-download:hover {
+            background: rgba(139, 0, 255, 0.15);
+            color: white;
+        }
+
+        .btn-download svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
         }
 
         /* AXXON SVG LOGO inline */
@@ -1274,9 +1309,17 @@
                         <span class="axxon-text-lg" style="font-size:1.8rem;color:#fff;">AXXON</span>
                     </div>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:12px 14px;">
                     <div class="logo-card-name">Branco · Fundo escuro</div>
                     <div class="logo-card-use">Uso principal — dark mode</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#0A0A0A', 'horizontal', '#fff', '#8B00FF', '#0A0A0A', 'axxon-logo-dark')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
             <div class="logo-card">
@@ -1289,9 +1332,17 @@
                         <span class="axxon-text-lg" style="font-size:1.8rem;color:#0A0A0A;">AXXON</span>
                     </div>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:12px 14px;">
                     <div class="logo-card-name">Escuro · Fundo claro</div>
                     <div class="logo-card-use">Uso em materiais impressos</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#F4F0F8', 'horizontal', '#0A0A0A', '#8B00FF', '#F4F0F8', 'axxon-logo-light')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
             <div class="logo-card">
@@ -1304,9 +1355,17 @@
                         <span class="axxon-text-lg" style="font-size:1.8rem;color:#FFFFFF;">AXXON</span>
                     </div>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:12px 14px;">
                     <div class="logo-card-name">Branco · Fundo roxo</div>
                     <div class="logo-card-use">Peças de marca, eventos</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#8B00FF', 'horizontal', '#FFFFFF', '#FFFFFF', '#8B00FF', 'axxon-logo-purple')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
             <div class="logo-card">
@@ -1319,9 +1378,17 @@
                         <span class="axxon-text-lg" style="font-size:1.8rem;color:#C060FF;">AXXON</span>
                     </div>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:12px 14px;">
                     <div class="logo-card-name">Roxo claro · Fundo surface</div>
                     <div class="logo-card-use">Cards, seções escuras</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#1E1528', 'horizontal', '#C060FF', '#C060FF', '#1E1528', 'axxon-logo-surface')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
         </div>
@@ -1335,9 +1402,17 @@
                         <polygon points="22,18 28,32 22,32 16,32" fill="#0A0A0A" opacity="0.8" />
                     </svg>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:10px 12px;">
                     <div class="logo-card-name">Roxo · Escuro</div>
                     <div class="logo-card-use">Favicon, app icon</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#0A0A0A', 'icon', '#8B00FF', '#8B00FF', '#0A0A0A', 'axxon-icon-dark')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
             <div class="logo-card">
@@ -1347,9 +1422,17 @@
                         <polygon points="22,18 28,32 22,32 16,32" fill="#F4F0F8" />
                     </svg>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:10px 12px;">
                     <div class="logo-card-name">Roxo · Claro</div>
                     <div class="logo-card-use">Papelaria, docs</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#F4F0F8', 'icon', '#8B00FF', '#8B00FF', '#F4F0F8', 'axxon-icon-light')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
             <div class="logo-card">
@@ -1359,9 +1442,17 @@
                         <polygon points="22,18 28,32 22,32 16,32" fill="#8B00FF" />
                     </svg>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:10px 12px;">
                     <div class="logo-card-name">Branco · Roxo</div>
                     <div class="logo-card-use">Ícone monocromático</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#8B00FF', 'icon', '#FFFFFF', '#FFFFFF', '#8B00FF', 'axxon-icon-purple')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
             <div class="logo-card">
@@ -1371,9 +1462,17 @@
                         <polygon points="22,18 28,32 22,32 16,32" fill="#FFFFFF" />
                     </svg>
                 </div>
-                <div class="logo-card-info">
+                <div class="logo-card-info" style="padding:10px 12px;">
                     <div class="logo-card-name">Preto · Branco</div>
                     <div class="logo-card-use">Escala de cinza</div>
+                    <button class="btn-download"
+                        onclick="downloadLogo(this, '#FFFFFF', 'icon', '#0A0A0A', '#0A0A0A', '#FFFFFF', 'axxon-icon-bw')">
+                        <svg viewBox="0 0 12 12" fill="none">
+                            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Baixar PNG
+                    </button>
                 </div>
             </div>
         </div>
@@ -1630,6 +1729,106 @@
         }, { threshold: 0.08 });
         reveals.forEach(el => observer.observe(el));
     </script>
+    <script>
+        function downloadLogo(btn, bg, type, textColor, symbolColor, cutoutColor, filename) {
+            const isHorizontal = type === 'horizontal';
+            const w = isHorizontal ? 800 : 400;
+            const h = isHorizontal ? 320 : 400;
+
+            const canvas = document.createElement('canvas');
+            canvas.width = w * 2;
+            canvas.height = h * 2;
+            const ctx = canvas.getContext('2d');
+            ctx.scale(2, 2);
+
+            // Background
+            ctx.fillStyle = bg;
+            ctx.fillRect(0, 0, w, h);
+
+            // Draw A mark
+            const markSize = isHorizontal ? h * 0.55 : h * 0.42;
+            const markX = isHorizontal ? w * 0.14 : w * 0.5;
+            const markY = isHorizontal ? h * 0.5 : h * 0.38;
+
+            function drawAMark(cx, cy, size, fill, cutout) {
+                const s = size;
+                ctx.save();
+                ctx.translate(cx, cy);
+
+                // Outer triangle
+                ctx.beginPath();
+                ctx.moveTo(0, -s * 0.5);
+                ctx.lineTo(s * 0.5, s * 0.5);
+                ctx.lineTo(-s * 0.5, s * 0.5);
+                ctx.closePath();
+                ctx.fillStyle = fill;
+                ctx.fill();
+
+                // Inner cutout
+                const cutH = s * 0.22;
+                const cutW = s * 0.22;
+                ctx.beginPath();
+                ctx.moveTo(0, -s * 0.05);
+                ctx.lineTo(cutW, s * 0.5 - 0.5);
+                ctx.lineTo(-cutW, s * 0.5 - 0.5);
+                ctx.closePath();
+                ctx.fillStyle = cutout;
+                ctx.fill();
+
+                ctx.restore();
+            }
+
+            drawAMark(
+                isHorizontal ? markX * 1 : markX,
+                markY,
+                markSize,
+                symbolColor,
+                cutoutColor
+            );
+
+            if (isHorizontal) {
+                // Wordmark
+                const fontSize = h * 0.32;
+                ctx.font = `700 ${fontSize}px 'Rajdhani', 'Arial Black', sans-serif`;
+                ctx.fillStyle = textColor;
+                ctx.letterSpacing = '6px';
+                ctx.fillText('AXXON', w * 0.31, h * 0.595);
+
+                // Tagline
+                const tagSize = h * 0.075;
+                ctx.font = `300 ${tagSize}px 'Exo 2', Arial, sans-serif`;
+                ctx.fillStyle = textColor === '#FFFFFF' || textColor === '#fff' ? 'rgba(255,255,255,0.55)' : 'rgba(0,0,0,0.5)';
+                const tag = 'AUTOMAÇÃO  INTELIGENTE  PARA  EMPRESAS';
+                const tagX = w * 0.31;
+                ctx.fillText(tag, tagX, h * 0.72);
+            } else {
+                // Just icon — label below
+                const fontSize = h * 0.12;
+                ctx.font = `700 ${fontSize}px 'Rajdhani', 'Arial Black', sans-serif`;
+                ctx.fillStyle = textColor;
+                ctx.textAlign = 'center';
+                ctx.fillText('AXXON', w * 0.5, h * 0.78);
+            }
+
+            // Download
+            const link = document.createElement('a');
+            link.download = filename + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+
+            // Feedback
+            const original = btn.innerHTML;
+            btn.textContent = 'Baixado!';
+            btn.style.color = '#00C864';
+            btn.style.borderColor = 'rgba(0,200,100,0.4)';
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.style.color = '';
+                btn.style.borderColor = '';
+            }, 2000);
+        }
+    </script>
+
 </body>
 
 </html>
