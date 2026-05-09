@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axxon — Manual da Marca</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0A0A0A;
+            --purple: #8B00FF;
+            --purple-mid: #A020F0;
+            --purple-light: #C060FF;
+            --purple-dim: #3A005C;
+            --white: #FFFFFF;
+            --offwhite: #F4F0F8;
+            --surface: #141018;
+            --surface2: #1E1528;
+            --border: rgba(139, 0, 255, 0.2);
+            --border-bright: rgba(139, 0, 255, 0.5);
+            --gray: #888;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: var(--purple-mid);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--purple-light);
+        }
+
+        .nav-tag {
+            font-size: 0.7rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--purple-mid);
+            border: 1px solid var(--border-bright);
+            padding: 3px 10px;
+            border-radius: 2px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 6rem 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section.full {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 64px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 50% 60%, rgba(139, 0, 255, 0.12) 0%, transparent 70%),
+                repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(139, 0, 255, 0.04) 80px),
+                repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(139, 0, 255, 0.04) 80px);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--purple-mid);
+            margin-bottom: 2rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--purple-mid);
+            opacity: 0.6;
+        }
+
+        .hero-wordmark {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-wordmark-text {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(5rem, 14vw, 11rem);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            line-height: 1;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-sub {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 3rem;
+        }
+
+        .hero-sub strong {
+            color: var(--purple-mid);
+            font-weight: 600;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border-bright);
+            padding: 8px 20px;
+            font-size: 0.75rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--purple-light);
+        }
+
+        .hero-badge::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: var(--purple-mid);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.7);
+            }
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.25);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, rgba(139, 0, 255, 0.7), transparent);
+            animation: scroll-line 2s ease-in-out infinite;
+        }
+
+        @keyframes scroll-line {
+            0% {
+                transform: scaleY(0);
+                transform-origin: top;
+            }
+
+            50% {
+                transform: scaleY(1);
+                transform-origin: top;
+            }
+
+            51% {
+                transform: scaleY(1);
+                transform-origin: bottom;
+            }
+
+            100% {
+                transform: scaleY(0);
+                transform-origin: bottom;
+            }
+        }
+
+        /* SECTION LABELS */
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-label-tag {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--purple-mid);
+            background: rgba(139, 0, 255, 0.1);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+        }
+
+        .section-label-line {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .section-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 520px;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        /* DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-bright), transparent);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* COLORS */
+        .color-group-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-card {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .color-card:hover {
+            border-color: var(--border-bright);
+            transform: translateY(-2px);
+        }
+
+        .color-swatch {
+            height: 90px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+        }
+
+        .color-copy-hint {
+            font-size: 0.65rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.2s;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2px 8px;
+        }
+
+        .color-card:hover .color-copy-hint {
+            opacity: 1;
+        }
+
+        .color-info {
+            padding: 12px 14px;
+            background: var(--surface);
+        }
+
+        .color-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+
+        .color-hex {
+            font-family: 'Exo 2', sans-serif;
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 4px;
+        }
+
+        .color-use {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.4;
+        }
+
+        .copied-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--purple-mid);
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 10px 24px;
+            opacity: 0;
+            transition: all 0.3s;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .copied-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* TYPOGRAPHY */
+        .type-samples {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .type-row {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 2rem;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .type-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .type-meta-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--purple-light);
+        }
+
+        .type-meta-spec {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.35);
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* LOGO */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .logo-card {
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .logo-preview {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        .logo-card-info {
+            background: var(--surface);
+            padding: 12px 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .logo-card-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            margin-bottom: 3px;
+        }
+
+        .logo-card-use {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* AXXON SVG LOGO inline */
+        .axxon-svg {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .a-mark {
+            width: 44px;
+            height: 44px;
+        }
+
+        .axxon-text-lg {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        /* COMPONENTS */
+        .comp-section {
+            margin-bottom: 3rem;
+        }
+
+        .comp-label {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--purple-mid);
+            color: white;
+            border: none;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 12px 28px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            border-radius: 0;
+        }
+
+        .btn-primary:hover {
+            background: var(--purple);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--purple-light);
+            border: 1px solid var(--border-bright);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 12px 28px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 0;
+        }
+
+        .btn-outline:hover {
+            background: rgba(139, 0, 255, 0.1);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 12px 28px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 0;
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+        }
+
+        .badge-purple {
+            background: rgba(139, 0, 255, 0.15);
+            color: var(--purple-light);
+            border: 1px solid var(--border);
+        }
+
+        .badge-white {
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .badge-dark {
+            background: var(--surface);
+            color: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--border);
+        }
+
+        .badge-outline {
+            background: transparent;
+            color: var(--purple-light);
+            border: 1px solid var(--border-bright);
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .ui-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            transition: border-color 0.3s, transform 0.3s;
+            cursor: default;
+            border-radius: 0;
+        }
+
+        .ui-card:hover {
+            border-color: var(--border-bright);
+            transform: translateY(-4px);
+        }
+
+        .ui-card-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(139, 0, 255, 0.12);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .ui-card-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .ui-card-desc {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.6;
+        }
+
+        /* ANIMATION DEMOS */
+        .anim-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .anim-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .anim-demo-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(139, 0, 255, 0.2);
+            border: 1px solid var(--border-bright);
+        }
+
+        .anim-float {
+            animation: anim-float-demo 3s ease-in-out infinite;
+        }
+
+        @keyframes anim-float-demo {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        .anim-pulse-box {
+            animation: anim-pulse-demo 2s ease-in-out infinite;
+        }
+
+        @keyframes anim-pulse-demo {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.85)
+            }
+        }
+
+        .anim-slide {
+            animation: anim-slide-demo 2.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+        }
+
+        @keyframes anim-slide-demo {
+
+            0%,
+            100% {
+                transform: translateX(-10px);
+                opacity: 0.3
+            }
+
+            40%,
+            60% {
+                transform: translateX(0);
+                opacity: 1
+            }
+        }
+
+        .anim-spin-ring {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: var(--purple-mid);
+            border-right-color: rgba(139, 0, 255, 0.3);
+            animation: anim-spin-demo 1.2s linear infinite;
+        }
+
+        @keyframes anim-spin-demo {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .anim-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .anim-code {
+            font-size: 0.68rem;
+            color: var(--purple-light);
+            font-family: monospace;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* TOM DE VOZ */
+        .voice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .voice-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1.8rem;
+        }
+
+        .voice-card-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--purple-light);
+            margin-bottom: 0.7rem;
+        }
+
+        .voice-card-desc {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .voice-example {
+            border-left: 2px solid var(--purple-mid);
+            padding-left: 1rem;
+            font-size: 0.88rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        /* PROIBIDO */
+        .proibido-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .proibido-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--surface);
+            border: 1px solid rgba(255, 50, 50, 0.15);
+            padding: 1.2rem 1.4rem;
+        }
+
+        .proibido-x {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            background: rgba(255, 50, 50, 0.15);
+            border: 1px solid rgba(255, 50, 50, 0.3);
+            color: #FF4444;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .proibido-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+
+        /* ACCESSIBILITY */
+        .access-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .access-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+        }
+
+        .access-ratio {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--purple-light);
+            margin-bottom: 0.3rem;
+        }
+
+        .access-pair {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .access-badge {
+            display: inline-block;
+            background: rgba(0, 200, 100, 0.12);
+            border: 1px solid rgba(0, 200, 100, 0.3);
+            color: #00C864;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 2px 10px;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo span {
+            color: var(--purple-mid);
+        }
+
+        .footer-sub {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.05em;
+        }
+
+        /* SCROLL REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Light sections */
+        .section-light {
+            background: var(--offwhite);
+            color: var(--black);
+            padding: 6rem 3rem;
+        }
+
+        .section-light .section-title {
+            color: var(--black);
+        }
+
+        .section-light .section-desc {
+            color: rgba(0, 0, 0, 0.55);
+        }
+
+        .section-light .section-label-tag {
+            background: rgba(139, 0, 255, 0.08);
+            color: var(--purple-dim);
+            border-color: rgba(139, 0, 255, 0.2);
+        }
+
+        .section-light .section-label-line {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .section-light .type-row {
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .section-light .type-meta-name {
+            color: var(--purple-dim);
+        }
+
+        .section-light .type-meta-spec {
+            color: rgba(0, 0, 0, 0.35);
+        }
+
+        .section-light .color-group-title {
+            color: rgba(0, 0, 0, 0.35);
+        }
+
+        .section-light-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">AXX<span>ON</span></a>
+        <ul class="nav-links">
+            <li><a href="#cores">Cores</a></li>
+            <li><a href="#tipografia">Tipografia</a></li>
+            <li><a href="#logo">Logo</a></li>
+            <li><a href="#componentes">Componentes</a></li>
+            <li><a href="#animacoes">Animações</a></li>
+            <li><a href="#voz">Tom de Voz</a></li>
+        </ul>
+        <span class="nav-tag">Brand Guidelines 2026</span>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero full">
+        <div class="hero-bg"></div>
+        <div class="hero-eyebrow">Identidade Visual Oficial</div>
+        <div class="hero-wordmark">
+            <div class="hero-wordmark-text">AXXON</div>
+        </div>
+        <div class="hero-sub">Automação <strong>Inteligente</strong> Para Empresas</div>
+        <div class="hero-badge">Manual da Marca — 2026</div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            Scroll
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- CORES -->
+    <section id="cores" class="reveal">
+        <div class="section-label">
+            <div class="section-label-tag">Paleta</div>
+            <div class="section-label-line"></div>
+        </div>
+        <div class="section-title">Cores</div>
+        <div class="section-desc">Clique em qualquer cor para copiar o hex. A identidade usa fundo escuro como padrão,
+            com o roxo vibrante como elemento de destaque e energia.</div>
+
+        <div class="color-group-title">Primárias</div>
+        <div class="color-grid">
+            <div class="color-card" onclick="copyColor('#8B00FF', this)">
+                <div class="color-swatch" style="background:#8B00FF">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.9)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Axxon Purple</div>
+                    <div class="color-hex">#8B00FF</div>
+                    <div class="color-use">Cor primária, símbolo, destaques</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#A020F0', this)">
+                <div class="color-swatch" style="background:#A020F0">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.9)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Violet Mid</div>
+                    <div class="color-hex">#A020F0</div>
+                    <div class="color-use">Botões, CTAs, gradiente médio</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#C060FF', this)">
+                <div class="color-swatch" style="background:#C060FF">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.9)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Violet Light</div>
+                    <div class="color-hex">#C060FF</div>
+                    <div class="color-use">Hover states, badges, links</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#0A0A0A', this)">
+                <div class="color-swatch" style="background:#0A0A0A; border:1px solid rgba(255,255,255,0.1)">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.7)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Void</div>
+                    <div class="color-hex">#0A0A0A</div>
+                    <div class="color-use">Background principal</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#FFFFFF', this)">
+                <div class="color-swatch" style="background:#FFFFFF">
+                    <span class="color-copy-hint" style="color:rgba(0,0,0,0.7)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">White</div>
+                    <div class="color-hex">#FFFFFF</div>
+                    <div class="color-use">Texto sobre escuro, wordmark</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-title">Superfícies</div>
+        <div class="color-grid">
+            <div class="color-card" onclick="copyColor('#141018', this)">
+                <div class="color-swatch" style="background:#141018; border:1px solid rgba(139,0,255,0.2)">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.7)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Surface Dark</div>
+                    <div class="color-hex">#141018</div>
+                    <div class="color-use">Cards, fundos secundários</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#1E1528', this)">
+                <div class="color-swatch" style="background:#1E1528; border:1px solid rgba(139,0,255,0.2)">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.7)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Surface Purple</div>
+                    <div class="color-hex">#1E1528</div>
+                    <div class="color-use">Seções com toque de marca</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#F4F0F8', this)">
+                <div class="color-swatch" style="background:#F4F0F8">
+                    <span class="color-copy-hint" style="color:rgba(0,0,0,0.6)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Off-White</div>
+                    <div class="color-hex">#F4F0F8</div>
+                    <div class="color-use">Seções claras, fundos alternativos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-title">Utilitários</div>
+        <div class="color-grid">
+            <div class="color-card" onclick="copyColor('#00C864', this)">
+                <div class="color-swatch" style="background:#00C864">
+                    <span class="color-copy-hint" style="color:rgba(0,0,0,0.8)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Success</div>
+                    <div class="color-hex">#00C864</div>
+                    <div class="color-use">Métricas positivas, confirmações</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#FF3B30', this)">
+                <div class="color-swatch" style="background:#FF3B30">
+                    <span class="color-copy-hint" style="color:rgba(255,255,255,0.9)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Error</div>
+                    <div class="color-hex">#FF3B30</div>
+                    <div class="color-use">Alertas, negações, erros</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyColor('#F59E0B', this)">
+                <div class="color-swatch" style="background:#F59E0B">
+                    <span class="color-copy-hint" style="color:rgba(0,0,0,0.8)">Copiar hex</span>
+                </div>
+                <div class="color-info">
+                    <div class="color-name">Warning</div>
+                    <div class="color-hex">#F59E0B</div>
+                    <div class="color-use">Avisos, atenção, pendências</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- TIPOGRAFIA -->
+    <div class="section-light" id="tipografia">
+        <div class="section-light-inner reveal">
+            <div class="section-label">
+                <div class="section-label-tag">Fonte</div>
+                <div class="section-label-line"></div>
+            </div>
+            <div class="section-title">Tipografia</div>
+            <div class="section-desc">Duas famílias em sinergia: Rajdhani para títulos e elementos de marca — agressiva,
+                técnica, com personalidade. Exo 2 para textos e corpo — legível, moderna, versátil.</div>
+
+            <div class="type-samples">
+                <div class="type-row">
+                    <div class="type-meta">
+                        <div class="type-meta-name">Display / Hero</div>
+                        <div class="type-meta-spec">Rajdhani · 700<br>clamp(4rem, 10vw, 8rem)<br>letter-spacing: 0.08em
+                        </div>
+                    </div>
+                    <div
+                        style="font-family:'Rajdhani',sans-serif; font-size: clamp(2.5rem,6vw,5rem); font-weight:700; letter-spacing:0.08em; line-height:1; color:#0A0A0A;">
+                        AXXON</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-meta">
+                        <div class="type-meta-name">H1 / Seção</div>
+                        <div class="type-meta-spec">Rajdhani · 700<br>2.5–4rem<br>letter-spacing: 0.02em</div>
+                    </div>
+                    <div
+                        style="font-family:'Rajdhani',sans-serif; font-size: clamp(1.8rem,4vw,3.2rem); font-weight:700; letter-spacing:0.02em; line-height:1.1; color:#0A0A0A;">
+                        Automação que transforma</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-meta">
+                        <div class="type-meta-name">H2 / Card</div>
+                        <div class="type-meta-spec">Rajdhani · 600<br>1.3–1.6rem<br>letter-spacing: 0.05em</div>
+                    </div>
+                    <div
+                        style="font-family:'Rajdhani',sans-serif; font-size: 1.4rem; font-weight:600; letter-spacing:0.05em; color:#0A0A0A;">
+                        Fluxos Inteligentes de Trabalho</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-meta">
+                        <div class="type-meta-name">Label / Tag</div>
+                        <div class="type-meta-spec">Rajdhani · 600<br>0.7–0.8rem<br>letter-spacing: 0.18em · uppercase
+                        </div>
+                    </div>
+                    <div
+                        style="font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#8B00FF;">
+                        Automação · Case Study</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-meta">
+                        <div class="type-meta-name">Body</div>
+                        <div class="type-meta-spec">Exo 2 · 300–400<br>0.9–1rem<br>line-height: 1.7</div>
+                    </div>
+                    <div
+                        style="font-family:'Exo 2',sans-serif; font-size:0.95rem; font-weight:300; line-height:1.7; color:rgba(0,0,0,0.65); max-width:480px;">
+                        Trabalhamos com dados reais para automatizar o que funciona e eliminar o que drena recursos.
+                        Cada fluxo otimizado com inteligência e precisão.</div>
+                </div>
+                <div class="type-row">
+                    <div class="type-meta">
+                        <div class="type-meta-name">Destaque / Bold</div>
+                        <div class="type-meta-spec">Exo 2 · 700–900<br>1rem<br>tracking normal</div>
+                    </div>
+                    <div style="font-family:'Exo 2',sans-serif; font-size:1rem; font-weight:900; color:#3A005C;">
+                        Inteligente. Veloz. Escalável.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGO -->
+    <section id="logo" class="reveal">
+        <div class="section-label">
+            <div class="section-label-tag">Identidade</div>
+            <div class="section-label-line"></div>
+        </div>
+        <div class="section-title">Logo</div>
+        <div class="section-desc">Espaço mínimo ao redor: 20px. Nunca distorcer, rotacionar ou aplicar efeitos. Use
+            sempre a versão com contraste adequado para o fundo.</div>
+
+        <div class="color-group-title" style="margin-top:0">Versões Horizontais</div>
+        <div class="logo-grid">
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#0A0A0A;">
+                    <div class="axxon-svg">
+                        <svg class="a-mark" viewBox="0 0 44 44" fill="none">
+                            <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#8B00FF" />
+                            <polygon points="22,18 28,32 22,32 16,32" fill="#0A0A0A" opacity="0.8" />
+                            <rect x="12" y="30" width="20" height="5" fill="#8B00FF" opacity="0.4" />
+                        </svg>
+                        <span class="axxon-text-lg" style="font-size:1.8rem;color:#fff;">AXXON</span>
+                    </div>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Branco · Fundo escuro</div>
+                    <div class="logo-card-use">Uso principal — dark mode</div>
+                </div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#F4F0F8;">
+                    <div class="axxon-svg">
+                        <svg class="a-mark" viewBox="0 0 44 44" fill="none">
+                            <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#8B00FF" />
+                            <polygon points="22,18 28,32 22,32 16,32" fill="#F4F0F8" opacity="0.9" />
+                        </svg>
+                        <span class="axxon-text-lg" style="font-size:1.8rem;color:#0A0A0A;">AXXON</span>
+                    </div>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Escuro · Fundo claro</div>
+                    <div class="logo-card-use">Uso em materiais impressos</div>
+                </div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#8B00FF;">
+                    <div class="axxon-svg">
+                        <svg class="a-mark" viewBox="0 0 44 44" fill="none">
+                            <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#FFFFFF" />
+                            <polygon points="22,18 28,32 22,32 16,32" fill="#8B00FF" opacity="0.8" />
+                        </svg>
+                        <span class="axxon-text-lg" style="font-size:1.8rem;color:#FFFFFF;">AXXON</span>
+                    </div>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Branco · Fundo roxo</div>
+                    <div class="logo-card-use">Peças de marca, eventos</div>
+                </div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#1E1528;">
+                    <div class="axxon-svg">
+                        <svg class="a-mark" viewBox="0 0 44 44" fill="none">
+                            <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#C060FF" />
+                            <polygon points="22,18 28,32 22,32 16,32" fill="#1E1528" opacity="0.9" />
+                        </svg>
+                        <span class="axxon-text-lg" style="font-size:1.8rem;color:#C060FF;">AXXON</span>
+                    </div>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Roxo claro · Fundo surface</div>
+                    <div class="logo-card-use">Cards, seções escuras</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-group-title">Símbolo Isolado (Ícone)</div>
+        <div class="logo-grid" style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));">
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#0A0A0A; height:100px;">
+                    <svg width="50" height="50" viewBox="0 0 44 44" fill="none">
+                        <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#8B00FF" />
+                        <polygon points="22,18 28,32 22,32 16,32" fill="#0A0A0A" opacity="0.8" />
+                    </svg>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Roxo · Escuro</div>
+                    <div class="logo-card-use">Favicon, app icon</div>
+                </div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#F4F0F8; height:100px;">
+                    <svg width="50" height="50" viewBox="0 0 44 44" fill="none">
+                        <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#8B00FF" />
+                        <polygon points="22,18 28,32 22,32 16,32" fill="#F4F0F8" />
+                    </svg>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Roxo · Claro</div>
+                    <div class="logo-card-use">Papelaria, docs</div>
+                </div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#8B00FF; height:100px;">
+                    <svg width="50" height="50" viewBox="0 0 44 44" fill="none">
+                        <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#FFFFFF" />
+                        <polygon points="22,18 28,32 22,32 16,32" fill="#8B00FF" />
+                    </svg>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Branco · Roxo</div>
+                    <div class="logo-card-use">Ícone monocromático</div>
+                </div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-preview" style="background:#FFFFFF; height:100px;">
+                    <svg width="50" height="50" viewBox="0 0 44 44" fill="none">
+                        <polygon points="22,4 40,40 30,40 22,20 14,40 4,40" fill="#0A0A0A" />
+                        <polygon points="22,18 28,32 22,32 16,32" fill="#FFFFFF" />
+                    </svg>
+                </div>
+                <div class="logo-card-info">
+                    <div class="logo-card-name">Preto · Branco</div>
+                    <div class="logo-card-use">Escala de cinza</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- COMPONENTES -->
+    <section id="componentes" class="reveal">
+        <div class="section-label">
+            <div class="section-label-tag">UI Kit</div>
+            <div class="section-label-line"></div>
+        </div>
+        <div class="section-title">Componentes</div>
+        <div class="section-desc">Passe o mouse para ver hover states. Geometria afiada, bordas mínimas. A identidade é
+            angular — sem border-radius excessivo.</div>
+
+        <div class="comp-section">
+            <div class="comp-label">Botões — geometria reta, sem border-radius</div>
+            <div class="btn-row">
+                <button class="btn-primary">Falar com a Axxon</button>
+                <button class="btn-outline">Ver Portfólio</button>
+                <button class="btn-ghost">Saiba Mais</button>
+            </div>
+        </div>
+
+        <div class="comp-section">
+            <div class="comp-label">Badges / Tags</div>
+            <div class="btn-row">
+                <span class="badge badge-purple">Automação</span>
+                <span class="badge badge-white">IA Aplicada</span>
+                <span class="badge badge-dark">Case Study</span>
+                <span class="badge badge-outline">Novo</span>
+            </div>
+        </div>
+
+        <div class="comp-section">
+            <div class="comp-label">Cards — hover com deslocamento + borda roxa</div>
+            <div class="cards-row">
+                <div class="ui-card">
+                    <div class="ui-card-icon">⚡</div>
+                    <div class="ui-card-title">Automação de Fluxos</div>
+                    <div class="ui-card-desc">Processos otimizados com IA para máxima eficiência operacional.</div>
+                </div>
+                <div class="ui-card">
+                    <div class="ui-card-icon">🤖</div>
+                    <div class="ui-card-title">Agentes Inteligentes</div>
+                    <div class="ui-card-desc">Bots que aprendem e adaptam às necessidades do seu negócio.</div>
+                </div>
+                <div class="ui-card">
+                    <div class="ui-card-icon">📊</div>
+                    <div class="ui-card-title">Analytics em Tempo Real</div>
+                    <div class="ui-card-desc">Dados que geram decisões. Dashboards que mostram o que importa.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ANIMAÇÕES -->
+    <section id="animacoes" class="reveal">
+        <div class="section-label">
+            <div class="section-label-tag">Movimento</div>
+            <div class="section-label-line"></div>
+        </div>
+        <div class="section-title">Animações</div>
+        <div class="section-desc">Easing padrão: <code
+                style="color:var(--purple-light);font-size:0.85em">cubic-bezier(0.22, 1, 0.36, 1)</code> — entrada
+            rápida, saída suave. Movimento deve reforçar tecnologia e precisão.</div>
+
+        <div class="anim-grid">
+            <div class="anim-card">
+                <div class="anim-demo-box anim-float"></div>
+                <div class="anim-name">Float</div>
+                <div class="anim-code">animation: float 3s<br>ease-in-out infinite</div>
+            </div>
+            <div class="anim-card">
+                <div class="anim-demo-box anim-pulse-box"></div>
+                <div class="anim-name">Pulse</div>
+                <div class="anim-code">animation: pulse 2s<br>ease-in-out infinite</div>
+            </div>
+            <div class="anim-card">
+                <div class="anim-demo-box anim-slide"></div>
+                <div class="anim-name">Slide Up</div>
+                <div class="anim-code">cubic-bezier(0.22,1,0.36,1)<br>duration: 0.8s</div>
+            </div>
+            <div class="anim-card">
+                <div class="anim-spin-ring"></div>
+                <div class="anim-name">Loader</div>
+                <div class="anim-code">animation: spin 1.2s<br>linear infinite</div>
+            </div>
+        </div>
+
+        <div style="margin-top:2rem; background:var(--surface); border:1px solid var(--border); padding:1.5rem;">
+            <div class="comp-label">Scroll Reveal — IntersectionObserver</div>
+            <div style="font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7;">
+                threshold: 0.08 · Stagger de 80ms entre irmãos no grid · transition: opacity .7s, transform .7s
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- TOM DE VOZ -->
+    <section id="voz" class="reveal">
+        <div class="section-label">
+            <div class="section-label-tag">Comunicação</div>
+            <div class="section-label-line"></div>
+        </div>
+        <div class="section-title">Tom de Voz</div>
+        <div class="section-desc">Técnico, confiante e preciso. Sem jargão vazio, sem promessas vagas. A Axxon fala como
+            uma empresa que domina o que faz.</div>
+
+        <div class="voice-grid">
+            <div class="voice-card">
+                <div class="voice-card-title">Direto</div>
+                <div class="voice-card-desc">Frases curtas, ativas, orientadas a resultado. O cliente entende na
+                    primeira leitura.</div>
+                <div class="voice-example">"Automatizamos seu processo em 30 dias — ou reembolsamos."</div>
+            </div>
+            <div class="voice-card">
+                <div class="voice-card-title">Técnico sem ser hermético</div>
+                <div class="voice-card-desc">Mostra expertise sem alienar. Termos técnicos apenas quando agregam valor.
+                </div>
+                <div class="voice-example">"Agentes de IA que se integram ao seu CRM em horas, não meses."</div>
+            </div>
+            <div class="voice-card">
+                <div class="voice-card-title">Confiante</div>
+                <div class="voice-card-desc">Sem "pode ser", "talvez", "acreditamos que". Afirmações baseadas em dados
+                    reais.</div>
+                <div class="voice-example">"Seu concorrente já está automatizando. Você vai esperar mais quanto tempo?"
+                </div>
+            </div>
+            <div class="voice-card">
+                <div class="voice-card-title">Próximo mas profissional</div>
+                <div class="voice-card-desc">Sem corporativês. Sem informalidade excessiva. Tom de parceiro estratégico.
+                </div>
+                <div class="voice-example">"A gente cuida da automação. Você cuida de crescer."</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ACESSIBILIDADE -->
+    <div class="section-light">
+        <div class="section-light-inner reveal">
+            <div class="section-label">
+                <div class="section-label-tag">WCAG</div>
+                <div class="section-label-line"></div>
+            </div>
+            <div class="section-title">Acessibilidade</div>
+            <div class="section-desc">Tamanho mínimo de corpo: 14px. Todos os elementos interativos devem ter
+                :focus-visible. Contraste mínimo AA em todos os contextos.</div>
+
+            <div class="access-grid">
+                <div class="access-card">
+                    <div class="access-ratio">21:1</div>
+                    <div class="access-pair">#FFFFFF sobre #0A0A0A</div>
+                    <span class="access-badge">AAA ✓</span>
+                </div>
+                <div class="access-card">
+                    <div class="access-ratio">5.1:1</div>
+                    <div class="access-pair">#FFFFFF sobre #8B00FF</div>
+                    <span class="access-badge">AA ✓</span>
+                </div>
+                <div class="access-card">
+                    <div class="access-ratio">18.4:1</div>
+                    <div class="access-pair">#0A0A0A sobre #F4F0F8</div>
+                    <span class="access-badge">AAA ✓</span>
+                </div>
+                <div class="access-card">
+                    <div class="access-ratio">4.8:1</div>
+                    <div class="access-pair">#C060FF sobre #0A0A0A</div>
+                    <span class="access-badge">AA ✓</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROIBIDO -->
+    <section class="reveal">
+        <div class="section-label">
+            <div class="section-label-tag">Restrições</div>
+            <div class="section-label-line"></div>
+        </div>
+        <div class="section-title">Proibido</div>
+        <div class="section-desc">O que nunca deve aparecer em materiais da Axxon.</div>
+
+        <div class="proibido-grid">
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Gradientes na logo ou no wordmark</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Border-radius excessivo nos elementos de marca</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Fonts decorativas ou serifadas no material de marca</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Cores fora da paleta aprovada</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Logo esticada, rotacionada ou recortada</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Roxo claro sobre fundo claro — baixo contraste</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Sombras excessivas ou efeitos skeuomórficos</div>
+            </div>
+            <div class="proibido-item">
+                <div class="proibido-x">✕</div>
+                <div class="proibido-text">Aplicar efeitos de brilho ou neon na logo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="divider"></div>
+    <div class="footer">
+        <div class="footer-logo">AXX<span>ON</span></div>
+        <div class="footer-sub">Manual da Marca 2026 · Documento interno. Não distribuir externamente.</div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="copied-toast" id="toast">Copiado!</div>
+
+    <script>
+        function copyColor(hex, card) {
+            navigator.clipboard.writeText(hex).catch(() => { });
+            const toast = document.getElementById('toast');
+            toast.textContent = hex + ' copiado!';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), 0);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
